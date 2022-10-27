@@ -12,5 +12,5 @@ print('This is PHYTON')
 print('This is PHYTON.', 'I use it to study programming', ' in', 2022, 'year')
 
 #example 3,  using add arguments
-print('This is PHYTON.', 'I use it to study programming', ' in', 2022, 'year', sep='...')
+print(' This is PHYTON.', 'I use it to study programming', ' in', 2022, 'year', sep='...')
 print('This is PHYTON.', 'I use it to study programming', ' in', 2022, 'year', sep='...', end='!'*3)
