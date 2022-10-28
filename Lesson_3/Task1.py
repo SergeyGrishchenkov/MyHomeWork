@@ -8,4 +8,4 @@ my_name = 'Sergey'
 
 this_day = datetime.datetime.today().weekday()
 
-print(greeting_mask1 + ' ' + my_name + '! ' + str(this_day) + ' ' + greeting_mask2, end='.')
+print(greeting_mask1 + ' ' + my_name.title() + '! ' + str(this_day) + ' ' + greeting_mask2, end='.')
