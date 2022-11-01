@@ -1,0 +1,1 @@
+input('tell me smth:  ')
