@@ -23,13 +23,14 @@ def choice_random_int():
             return [bad_choice, rand_int, False]
 
 
-greeting_answer = input(greeting)
-if greeting_answer == 'Y':
-    player_name = input('Input your name:  ')
-    result = choice_random_int()
-    add_report = '' if result[2] else ('Correct choice is ' + str(result[1]))
-    print(f'{player_name}, {result[0]} {add_report}')
-elif greeting_answer == 'N':
-    print(f'See you next time!')
-else:
-    print(f'You have inputed wrong item.')
+if __name__ == "__main__":
+    greeting_answer = input(greeting)
+    if greeting_answer == 'Y':
+        player_name = input('Input your name:  ')
+        result = choice_random_int()
+        add_report = '' if result[2] else ('Correct choice is ' + str(result[1]))
+        print(f'{player_name}, {result[0]} {add_report}')
+    elif greeting_answer == 'N':
+        print(f'See you next time!')
+    else:
+        print(f'You have inputed wrong item.')
