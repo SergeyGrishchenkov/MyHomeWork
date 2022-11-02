@@ -12,7 +12,7 @@ if len(word_for_combination) < 5:
 else:
     # тут рандомно генерим символы из диапазона 0 - len(word_for_combination) -1
     # самая большая сложность - отслеживать повторную генерацию символа
-    # Применим алгоритм несовпаления сгенерированного символа и
+    # Применим алгоритм контроля использованных символов в списке
     list_used_symbols = []
     word_result = ''
     index = 0
@@ -20,5 +20,6 @@ else:
         random_index = randint(0, len(word_for_combination) - 1)
         if random_index not in list_used_symbols:
             word_result += word_for_combination[random_index]
+            list_used_symbols.append(random_index)
             index += 1
     print(f'We have such result: {word_result}')
