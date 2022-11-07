@@ -12,5 +12,6 @@ while i < len(list_test1):
     if list_test1[i] % 7 == 0 and list_test1[i] % 5 != 0:
         list_test2.append(list_test1[i])
     i += 1
+
 print(list_test1)
 print(list_test2)
