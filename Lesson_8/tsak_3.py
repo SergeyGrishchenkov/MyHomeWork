@@ -9,5 +9,24 @@
 # the call make_operation(‘-’, 5, 5, -10, -20) should return 30
 # the call make_operation(‘*’, 7, 6) should return 42
 
+def make_operation(operator, *args):
+    result = args[0] # присваиваем переменной первое значение кортежа
+    i = 0 #счетчик для игнора первого значения кортежа
+    for item in args:
+        if i == 0:
+            i += 1
+            continue
+        elif operator == '+':
+            result += item
+        elif operator == '-':
+            result -= item
+        elif operator == '*':
+            result *= item
+        else:
+            return None
+    return result
 
 if __name__ == "__main__":
+
+    result = make_operation('+', 7, 7, 2)
+    print(result)
