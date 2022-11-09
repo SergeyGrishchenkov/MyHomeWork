@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 7 Home tasks">
-      <change beforePath="$PROJECT_DIR$/lesson_7/Task_4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_7/Task_4.py" afterDir="false" />
-    </list>
+    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 7 Home tasks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +173,7 @@
       <workItem from="1667491833318" duration="6784000" />
       <workItem from="1667545410482" duration="904000" />
       <workItem from="1667587703935" duration="8867000" />
-      <workItem from="1667830824375" duration="7436000" />
+      <workItem from="1667830824375" duration="8046000" />
     </task>
     <task id="LOCAL-00001" summary="test connecting gitHub">
       <created>1666893886415</created>
@@ -415,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667842743156</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Lesson 7 Home tasks">
+      <created>1667843231944</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1667843231944</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
