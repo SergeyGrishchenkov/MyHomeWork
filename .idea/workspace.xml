@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 8 Home tasks">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_8/task_4_additional.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_8/task_4_additional.py" afterDir="false" />
-    </list>
+    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 8 Home tasks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +174,7 @@
       <workItem from="1667545410482" duration="904000" />
       <workItem from="1667587703935" duration="8867000" />
       <workItem from="1667830824375" duration="8046000" />
-      <workItem from="1667972725484" duration="5496000" />
+      <workItem from="1667972725484" duration="6055000" />
     </task>
     <task id="LOCAL-00001" summary="test connecting gitHub">
       <created>1666893886415</created>
@@ -452,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667976528823</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Lesson 8 Home tasks">
+      <created>1667978571853</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1667978571853</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +505,7 @@
     <SUITE FILE_PATH="coverage/MyHomeWork$Task1.coverage" NAME="Task1 Coverage Results" MODIFIED="1667073343349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_4" />
     <SUITE FILE_PATH="coverage/MyHomeWork$Task_1.coverage" NAME="Task_1 Coverage Results" MODIFIED="1667972799094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_7" />
     <SUITE FILE_PATH="coverage/MyHomeWork$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1666981321407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_2" />
-    <SUITE FILE_PATH="coverage/MyHomeWork$task_4_additional.coverage" NAME="task_4_additional Coverage Results" MODIFIED="1667978469330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_8" />
+    <SUITE FILE_PATH="coverage/MyHomeWork$task_4_additional.coverage" NAME="task_4_additional Coverage Results" MODIFIED="1667978564538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_8" />
     <SUITE FILE_PATH="coverage/MyHomeWork$Task2.coverage" NAME="Task2 Coverage Results" MODIFIED="1667075338479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_4" />
   </component>
 </project>
