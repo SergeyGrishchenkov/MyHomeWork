@@ -12,7 +12,7 @@ def check_oops(test_case_tuple: object) -> object:
         try:
             oops(case)
         except IndexError:
-            print(f'Congratulation!!! We have just caught:\n {IndexError.__doc__}\n\n')
+            print(f'Congratulation!!!  We  have just caught:\n {IndexError.__doc__}\n\n')
 
 
 def main():
