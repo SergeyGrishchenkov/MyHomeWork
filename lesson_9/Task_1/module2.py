@@ -1,6 +1,7 @@
 #
-def function_for_import():
-    print('gdhs')
+def function_example_for_import():
+    print('\nHello my friend!!!\nThis is an example of connecting another module!!!')
+
 
 if __name__ == '__main__':
-    function_for_import()
+    function_example_for_import()
