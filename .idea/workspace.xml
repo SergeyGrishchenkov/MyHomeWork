@@ -42,7 +42,7 @@
       <recent name="C:\Users\grisv\PycharmProjects\MyHomeWork\lesson_9\Task_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.task_2">
+  <component name="RunManager" selected="Python.task_1">
     <configuration name="lesson_9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyHomeWork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task_2" />
         <item itemvalue="Python.task_1" />
+        <item itemvalue="Python.task_2" />
         <item itemvalue="Python.lesson_9" />
         <item itemvalue="Python.module1" />
         <item itemvalue="Python.module2" />
