@@ -27,7 +27,8 @@ def delete_by_phonenumber():
 def update_by_phonenumber():
         print('')
 
-t_activity = (('Add new entries', 'Search by first name'), ('Add', 'fn'), (add_new, find_by_first_name))
+t_activity = (('Add new entries', 'Search by first name'), ('Add', 'fn'), ('Add new entries',add_new, find_by_first_name))
+possible_activity = {'add': ['Add new entries', add_new]}
 
 def start():
     choise = input("Would you like to work with the phone book?\nType Y - to start work or any key - to refuse:\n")
