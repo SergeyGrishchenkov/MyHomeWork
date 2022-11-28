@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 13 Home tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_11/task_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_11/task_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_13/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_13/task_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,14 +200,7 @@
       <workItem from="1669127569642" duration="2109000" />
       <workItem from="1669138183916" duration="4175000" />
       <workItem from="1669229098664" duration="11483000" />
-      <workItem from="1669528983366" duration="33701000" />
-    </task>
-    <task id="LOCAL-00011" summary="Lesson 4 Home tasks">
-      <created>1667075415178</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1667075415178</updated>
+      <workItem from="1669528983366" duration="34963000" />
     </task>
     <task id="LOCAL-00012" summary="Lesson 4 Home tasks">
       <created>1667078603054</created>
@@ -545,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669615101087</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Lesson 13 Home tasks">
+      <created>1669636090047</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1669636090047</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
