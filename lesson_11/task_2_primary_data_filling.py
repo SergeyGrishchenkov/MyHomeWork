@@ -1,8 +1,8 @@
 import json as j
 ask = input('Do you really want to fill primary data?\nAll previous data will be cleared!!!\nInput Y if you agree or wny symbol if not\n')
-l_states = ['Киев','Львовская','Житомирская','Винницкая','Черновецкая','Ивано-Франковская']
-l_scities = [[0,['Вишневое','Чабаны','Гатное']],[1,['Львов','Яворов']],[2,['Житомир','Коростышев']],[3,['Винница','Жмеринка']],[4,['Черновцы','Каменец-Подольский']],[5,['Ивано-Франковск','Яремче']]]
-persona_dict = dict(first_name='', last_name='', full_name='', phone_numbers=[], state=0, city=0)
+l_states = ['Kiev', 'Lviv', 'Vinniza', 'Chernigiv']
+l_scities = {'Kiev': ['Kiev', 'Chabany', 'Gatne'], 'Lviv': ['Lviv', 'Stry'], 'Vinniza': ['Vinniza'], 'Chernigiv': ['Chernigiv']}
+persona_dict = dict(first_name='', last_name='', full_name='', phone_numbers=[], state=-1, city=-1)
 
 if ask == 'Y':
     # We fill in the primary data of dictionaries states and cities
