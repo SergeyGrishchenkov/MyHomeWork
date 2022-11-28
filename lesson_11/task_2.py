@@ -3,11 +3,11 @@ import sys
 
 # ----
 def add_new(item: dict):
-    new_fname = inpup('Type on the keyboard the first name:\n')
-    new_lname = inpup('Type on the keyboard the last name:\n')
-    new_phone_number = inpup('Type on the keyboard the phone number:\n')
-    new_state = inpup('Type on the keyboard the State:\n')
-    new_city = inpup('Type on the keyboard the City:\n')
+    new_fname = input('Type on the keyboard the first name:\n')
+    new_lname = input('Type on the keyboard the last name:\n')
+    new_phone_number = input('Type on the keyboard the phone number:\n')
+    new_state = input('Type on the keyboard the State:\n')
+    new_city = input('Type on the keyboard the City:\n')
     new_person = {'first_name': new_fname,
                   'last_name': new_lname,
                   'full_name': new_fname + ' ' + new_lname,
@@ -68,11 +68,13 @@ try:
     with open(name + ".json", "r", encoding='UTF-8') as book:
         our_pb = j.load(book)
         #choise of activity
-        type_activity = secect_action(possible_activity)
+    type_activity = secect_action(possible_activity)
 
-        print(type(possible_activity[type_activity][1](our_pb)))
+    possible_activity[type_activity][1](our_pb)
 
-            #print(type(j.load(book)))
+    with open(name + ".json", "w", encoding='UTF-8') as book:
+        j.dump(book, our_pb)
+        #print(type(j.load(book)))
             #book_dic = j.load(book)
             #activity = choise_activity()
 except FileNotFoundError:
