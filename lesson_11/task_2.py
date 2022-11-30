@@ -23,29 +23,36 @@ def add_new(item: dict):
         return False
 def find_by_first_name(book: list):
     first_name = input('Type on the keyboard the first name to find:\n')
-    print('')
+    print('1')
+    return True
 
-def find_by_last_name():
-    print('')
+def find_by_last_name(book: list):
+    print('1')
+    return True
 
-def find_by_full_name():
-    print('')
+def find_by_full_name(book: list):
+    print('1')
+    return True
 
-def find_by_phonenumber():
-    print('')
+def find_by_phonenumber(book: list):
+    print('1')
+    return True
 
-def find_by_city_state():
-    print('')
+def find_by_city_state(book: list):
+    print('1')
+    return True
 
-def delete_by_phonenumber():
-    print('')
+def delete_by_phonenumber(book: list):
+    print('1')
+    return True
 
-def update_by_phonenumber():
-        print('')
+def update_by_phonenumber('', book: list):
+    print('1')
+    return True
 
-def exist_pb(actions: dict):
+def exist_pb(file_name, book: dict):
     with open(file_name, 'w') as f:
-        j.dump(actions, f)
+        j.dump(book, f)
     sys.exit()
 
 possible_activity = {'add': ['Add new entries', add_new],
@@ -84,7 +91,8 @@ def main():
     try:
         status = True
         while status:
-            with open(name + ".json", "r", encoding='UTF-8') as book:
+            file_name = name + ".json"
+            with open(file_name, "r", encoding='UTF-8') as book:
                 our_pb = j.load(book)
             #choise of activity
             type_activity = secect_action(possible_activity)
