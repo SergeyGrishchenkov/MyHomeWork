@@ -44,13 +44,10 @@ def update_by_phonenumber():
         print('')
 
 def exist_pb(actions: dict):
-    try:
-        with open(file_name, 'w') as f:
-            j.dump(actions, f)
-        sys.exit()
-    except Exception:
-        ptint(f'Something was wrong with adding information\n{Exception.__doc__}')
-        return False
+
+    with open(file_name, 'w') as f:
+        j.dump(actions, f)
+    sys.exit()
 
 possible_activity = {'add': ['Add new entries', add_new],
                     'fn': ['Search by first name', find_by_first_name],
