@@ -44,7 +44,6 @@ def update_by_phonenumber():
         print('')
 
 def exist_pb(actions: dict):
-
     with open(file_name, 'w') as f:
         j.dump(actions, f)
     sys.exit()
