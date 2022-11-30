@@ -15,14 +15,14 @@ def add_new(item: dict):
                       'phone_numbers': [new_phone_number],
                       'state': new_state,
                       'city': new_city}
-        item.update(new_person)
+        item['persons'].append(new_person)
         print('Information was successfully added!')
         return True
     except Exception:
         ptint(f'Something was wrong with adding information\n{Exception.__doc__}')
         return False
-def find_by_first_name(name: str, book: list):
-    #book.
+def find_by_first_name(book: list):
+    first_name = input('Type on the keyboard the first name to find:\n')
     print('')
 
 def find_by_last_name():
@@ -82,18 +82,17 @@ def main():
         sys.exit()
     name = input("Input Phone book name:\n")
     try:
-        with open(name + ".json", "r", encoding='UTF-8') as book:
-            our_pb = j.load(book)
+        status = True
+        while status:
+            with open(name + ".json", "r", encoding='UTF-8') as book:
+                our_pb = j.load(book)
             #choise of activity
-        type_activity = secect_action(possible_activity)
+            type_activity = secect_action(possible_activity)
 
-        possible_activity[type_activity][1](our_pb)
-
-        with open(name + ".json", "w", encoding='UTF-8') as book:
-            j.dump(our_pb, book)
+            status = possible_activity[type_activity][1](our_pb)
             #print(type(j.load(book)))
-                #book_dic = j.load(book)
-                #activity = choise_activity()
+            #book_dic = j.load(book)
+            #activity = choise_activity()
     except FileNotFoundError:
         print('Unfortunately, there are not such file!')
         print(FileNotFoundError.__doc__)
