@@ -46,11 +46,11 @@ def delete_by_phonenumber(book: list):
     print('1')
     return True
 
-def update_by_phonenumber('', book: list):
+def update_by_phonenumber(a: str, book: list):
     print('1')
     return True
 
-def exist_pb(file_name, book: dict):
+def exist_pb(file_name: str, book: dict):
     with open(file_name, 'w') as f:
         j.dump(book, f)
     sys.exit()
@@ -92,12 +92,12 @@ def main():
         status = True
         while status:
             file_name = name + ".json"
-            with open(file_name, "r", encoding='UTF-8') as book:
+            with open(name + ".json", "r", encoding='UTF-8') as book:
                 our_pb = j.load(book)
             #choise of activity
             type_activity = secect_action(possible_activity)
 
-            status = possible_activity[type_activity][1](our_pb)
+            status = possible_activity[type_activity][1](file_name, our_pb)
             #print(type(j.load(book)))
             #book_dic = j.load(book)
             #activity = choise_activity()
