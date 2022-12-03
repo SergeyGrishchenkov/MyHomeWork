@@ -33,15 +33,14 @@ def add_new(item: dict, file_name=''):
         return False
 
 
-def find_by(book: list, act, file_name=''):
-    first_name = input('Type on the keyboard the lastname to find:\n')
-    result = list(filter(lambda item: item[act] == first_name, book['persons']))
+def find_by(book: list, *args):
+    name_search = input('Type on the keyboard the lastname to find:\n')
+    result = list(filter(lambda item: item[args[0]] == name_search, book['persons']))
     if len(result) > 0:
-        print_result(result[0], 'Last Name', first_name)
+        print_result(result[0], 'Last Name', name_search)
     else:
-        print_non_result('Last Name', first_name)
+        print_non_result('Last Name', name_search)
     return True
-
 
 
 def delete_by_phonenumber(book: list, act='', file_name=''):
