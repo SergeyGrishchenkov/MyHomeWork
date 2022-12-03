@@ -22,7 +22,7 @@ def add_new(item: dict, file_name=''):
         new_person = {'first_name': new_fname,
                       'last_name': new_lname,
                       'full_name': new_fname + ' ' + new_lname,
-                      'phone_numbers': [new_phone_number],
+                      'phone_numbers': new_phone_number,
                       'state': new_state,
                       'city': new_city}
         item['persons'].append(new_person)
@@ -34,21 +34,21 @@ def add_new(item: dict, file_name=''):
 
 
 def find_by(book: list, *args):
-    name_search = input('Type on the keyboard the lastname to find:\n')
+    name_search = input('Type on the keyboard the '+name_dict[args[0]]+' to find:\n')
     result = list(filter(lambda item: item[args[0]] == name_search, book['persons']))
     if len(result) > 0:
-        print_result(result[0], 'Last Name', name_search)
+        print_result(result[0], name_dict[args[0]], name_search)
     else:
-        print_non_result('Last Name', name_search)
+        print_non_result(name_dict[args[0]], name_search)
     return True
 
 
-def delete_by_phonenumber(book: list, act='', file_name=''):
+def delete_by(book: list, *args):
     print('1')
     return True
 
 
-def update_by_phonenumber(book: list, act='', file_name=''):
+def update_by(book: list, *args):
     print('1')
     return True
 
@@ -66,10 +66,15 @@ possible_activity = {1: ['Add new entries', add_new],
                      4: ['Search by full name', find_by, 'full_name'],
                      5: ['Search by telephone number', find_by, 'phone_numbers'],
                      6: ['Search by city or state', find_by, ['state', 'city']],
-                     7: ['Delete a record for a given telephone number', delete_by_phonenumber, ''],
-                     8: ['Update a record for a given telephone number', update_by_phonenumber, ''],
+                     7: ['Delete a record for a given telephone number', delete_by, 'phone_numbers'],
+                     8: ['Update a record for a given telephone number', update_by, 'phone_numbers'],
                      0: ['Exist the program', exist_pb, '']}
 
+name_dict = dict(first_name='First Name',
+                 last_name='Last Name',
+                 full_name='Full Name',
+                 phone_numbers='Phone Number',
+                 state='State')
 
 def start():
     choise = input("Would you like to work with the phone book?\nType Y - to start work or any key - to refuse:\n")
