@@ -46,10 +46,10 @@ def find_by(book: list, *args):
     for i in args[0]:
         result = list(filter(lambda item: item[i] == name_search, book['persons']))
         if len(result) > 0:
-            print_result(result[0], name_dict[args[0]], name_search)
+            print_result(result[0], name_dict[i], name_search)
             return True
-        print_non_result(name_dict[args[0]], name_search)
-        return True
+    print_non_result(search_str, name_search)
+    return True
 
 
 def delete_by(book: list, *args):
@@ -77,6 +77,8 @@ def update_by(book: list, *args):
             new_lname = input('Type on the keyboard the new last name:\n')
             result[0]['last_name'] = new_lname
             result[0]['full_name'] = new_fname + ' ' + new_lname
+            new_pn = input('Type on the keyboard the new Phone Number:\n')
+            result[0]['phone_numbers'] = new_pn
             new_city = input('Type on the keyboard the new State:\n')
             result[0]['state'] = new_city
             new_city = input('Type on the keyboard the new City:\n')
