@@ -40,13 +40,16 @@ def add_new(item: dict, *args):
 
 
 def find_by(book: list, *args):
-    name_search = input('Type on the keyboard the ' + name_dict[args[0]] + ' to find:\n')
-    result = list(filter(lambda item: item[args[0]] == name_search, book['persons']))
-    if len(result) > 0:
-        print_result(result[0], name_dict[args[0]], name_search)
-    else:
+    search_str = ' or '.join(args[0])
+    #name_search = input('Type on the keyboard the ' + name_dict[args[0]] + ' to find:\n')
+    name_search = input('Type on the keyboard the ' + search_str + ' to find:\n')
+    for i in args[0]:
+        result = list(filter(lambda item: item[i] == name_search, book['persons']))
+        if len(result) > 0:
+            print_result(result[0], name_dict[args[0]], name_search)
+            return True
         print_non_result(name_dict[args[0]], name_search)
-    return True
+        return True
 
 
 def delete_by(book: list, *args):
@@ -55,10 +58,7 @@ def delete_by(book: list, *args):
     if len(result) > 0:
         choise = input('The record was found! Do you really want to delete them?\nType - Y or a key to refuse:\n')
         if choise.lower() == 'y':
-            print(book['persons'])
-            print(result[0])
             book['persons'].remove(result[0])
-            print(book['persons'])
             print_delete()
     else:
         print_non_result(name_dict[args[0]], name_search)
@@ -66,7 +66,25 @@ def delete_by(book: list, *args):
 
 
 def update_by(book: list, *args):
-    print('1')
+    phone_search = input('Type otn he keyboard the ' + name_dict[args[0]] + ' to update information:\n')
+    result = list(filter(lambda item: item[args[0]] == phone_search, book['persons']))
+    if len(result) > 0:
+        choise = input('The record was found! Do you really want to update them?\nType - Y or a key to refuse:\n')
+        if choise.lower() == 'y':
+            book['persons'].remove(result[0])
+            new_fname = input('Type on the keyboard the new first name:\n')
+            result[0]['first_name'] = new_fname
+            new_lname = input('Type on the keyboard the new last name:\n')
+            result[0]['last_name'] = new_lname
+            result[0]['full_name'] = new_fname + ' ' + new_lname
+            new_city = input('Type on the keyboard the new State:\n')
+            result[0]['state'] = new_city
+            new_city = input('Type on the keyboard the new City:\n')
+            result[0]['city'] = new_city
+            book['persons'].append(result[0])
+            print('Information was successfully updated!')
+    else:
+        print_non_result(name_dict[args[0]], phone_search)
     return True
 
 
@@ -78,10 +96,10 @@ def exist_pb(book: dict, act='', file_name=''):
 
 
 possible_activity = {1: ['Add new entries', add_new, ''],
-                     2: ['Search by first name', find_by, 'first_name'],
-                     3: ['Search by last name', find_by, 'last_name'],
-                     4: ['Search by full name', find_by, 'full_name'],
-                     5: ['Search by telephone number', find_by, 'phone_numbers'],
+                     2: ['Search by first name', find_by, ['first_name']],
+                     3: ['Search by last name', find_by, ['last_name']],
+                     4: ['Search by full name', find_by, ['full_name']],
+                     5: ['Search by telephone number', find_by, ['phone_numbers']],
                      6: ['Search by city or state', find_by, ['state', 'city']],
                      7: ['Delete a record for a given telephone number', delete_by, 'phone_numbers'],
                      8: ['Update a record for a given telephone number', update_by, 'phone_numbers'],
@@ -109,7 +127,7 @@ def start(act: bool):
             return False
 
 
-def secect_action(actions: dict):
+def select_action(actions: dict):
     options_list = 'What do you want to do?\nPossible options:\n'
     for k, v in actions.items():
         options_list += v[0] + ' , to use, type on the keyboard : ' + str(k) + '\n'
@@ -128,7 +146,7 @@ def main():
         with open(name + ".json", "r", encoding='UTF-8') as book:
             our_pb = j.load(book)
         while status:
-            type_activity = secect_action(possible_activity)
+            type_activity = select_action(possible_activity)
             status = possible_activity[int(type_activity)][1](our_pb, possible_activity[int(type_activity)][2],
                                                               file_name)
             if status:
@@ -145,16 +163,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # status = True
-    # name: str = input("Input Phone book name:\n")
-    # file_name = name + ".json"
-    # with open(name + ".json", "r", encoding='UTF-8') as book:
-    #     our_pb = j.load(book)
-    # while status:
-    #     type_activity = secect_action(possible_activity)
-    #     status = possible_activity[int(type_activity)][1](our_pb, possible_activity[int(type_activity)][2], file_name)
-    #     if status:
-    #         status = start(False)
-    # ch = input('Do you want to save changes?\nType Y - or any key - to refuse:\n')
-    # if ch:
-    #     exist_pb(our_pb, '', file_name)
