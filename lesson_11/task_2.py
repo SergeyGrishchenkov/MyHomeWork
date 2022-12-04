@@ -4,15 +4,21 @@ import sys
 
 # ----
 def print_result(res: dict, ind, condition):
-    p1 = '\n'.join(res['phone_numbers'])
+    p1 = ''
+    for k, v in name_dict:
+        p1 += v + ': ' + res[k] + '\n'
     print(f'Searching by indication: {ind}\nby condition: {condition} \nresult is:\n{p1}')
+
+
+def print_delete():
+    print(f'The record was successfully deleted\n')
 
 
 def print_non_result(ind, condition):
     print(f"For searching by indication: {ind}\nby condition: {condition} \nThere are not results!")
 
 
-def add_new(item: dict, file_name=''):
+def add_new(item: dict, *args):
     try:
         new_fname = input('Type on the keyboard the first name:\n')
         new_lname = input('Type on the keyboard the last name:\n')
@@ -29,12 +35,12 @@ def add_new(item: dict, file_name=''):
         print('Information was successfully added!')
         return True
     except Exception:
-        ptint(f'Something was wrong with adding information\n{Exception.__doc__}')
+        print(f'Something was wrong with adding information\n{Exception.__doc__}')
         return False
 
 
 def find_by(book: list, *args):
-    name_search = input('Type on the keyboard the '+name_dict[args[0]]+' to find:\n')
+    name_search = input('Type on the keyboard the ' + name_dict[args[0]] + ' to find:\n')
     result = list(filter(lambda item: item[args[0]] == name_search, book['persons']))
     if len(result) > 0:
         print_result(result[0], name_dict[args[0]], name_search)
@@ -44,7 +50,18 @@ def find_by(book: list, *args):
 
 
 def delete_by(book: list, *args):
-    print('1')
+    name_search = input('Type on the keyboard the ' + name_dict[args[0]] + ' to find:\n')
+    result = list(filter(lambda item: item[args[0]] == name_search, book['persons']))
+    if len(result) > 0:
+        choise = input('The record was found! Do you really want to delete them?\nType - Y or a key to refuse:\n')
+        if choise.lower() == 'y':
+            print(book['persons'])
+            print(result[0])
+            book['persons'].remove(result[0])
+            print(book['persons'])
+            print_delete()
+    else:
+        print_non_result(name_dict[args[0]], name_search)
     return True
 
 
@@ -60,7 +77,7 @@ def exist_pb(book: dict, act='', file_name=''):
     sys.exit()
 
 
-possible_activity = {1: ['Add new entries', add_new],
+possible_activity = {1: ['Add new entries', add_new, ''],
                      2: ['Search by first name', find_by, 'first_name'],
                      3: ['Search by last name', find_by, 'last_name'],
                      4: ['Search by full name', find_by, 'full_name'],
@@ -74,11 +91,16 @@ name_dict = dict(first_name='First Name',
                  last_name='Last Name',
                  full_name='Full Name',
                  phone_numbers='Phone Number',
-                 state='State')
+                 state='State',
+                 city='City')
 
-def start():
-    choise = input("Would you like to work with the phone book?\nType Y - to start work or any key - to refuse:\n")
-    match choise:
+
+def start(act: bool):
+    if act:
+        choice = input("Would you like to work with the phone book?\nType Y - to start work or any key - to refuse:\n")
+    else:
+        choice = input("Do you want to continue?\nType Y - to continue or any key - to stop working with program:\n")
+    match choice:
         case "Y":
             return True
         case "y":
@@ -96,23 +118,24 @@ def secect_action(actions: dict):
 
 
 def main():
-    start_working = start()
+    start_working = start(True)
     if not start_working:
         sys.exit()
-    name = input("Input Phone book name:\n")
     try:
         status = True
+        name: str = input("Input Phone book name:\n")
+        file_name = name + ".json"
+        with open(name + ".json", "r", encoding='UTF-8') as book:
+            our_pb = j.load(book)
         while status:
-            file_name = name + ".json"
-            with open(name + ".json", "r", encoding='UTF-8') as book:
-                our_pb = j.load(book)
-            # choise of activity
             type_activity = secect_action(possible_activity)
-
-            status = possible_activity[type_activity][1](file_name, our_pb)
-            # print(type(j.load(book)))
-            # book_dic = j.load(book)
-            # activity = choise_activity()
+            status = possible_activity[int(type_activity)][1](our_pb, possible_activity[int(type_activity)][2],
+                                                              file_name)
+            if status:
+                status = start(False)
+        ch = input('Do you want to save changes?\nType Y - or any key - to refuse:\n')
+        if ch:
+            exist_pb(our_pb, '', file_name)
     except FileNotFoundError:
         print('Unfortunately, there are not such file!')
         print(FileNotFoundError.__doc__)
@@ -121,12 +144,17 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    status = True
-    name: str = input("Input Phone book name:\n")
-    file_name = name + ".json"
-    with open(name + ".json", "r", encoding='UTF-8') as book:
-        our_pb = j.load(book)
-    while status:
-        type_activity = secect_action(possible_activity)
-        status = possible_activity[int(type_activity)][1](our_pb, possible_activity[int(type_activity)][2], file_name)
+    main()
+    # status = True
+    # name: str = input("Input Phone book name:\n")
+    # file_name = name + ".json"
+    # with open(name + ".json", "r", encoding='UTF-8') as book:
+    #     our_pb = j.load(book)
+    # while status:
+    #     type_activity = secect_action(possible_activity)
+    #     status = possible_activity[int(type_activity)][1](our_pb, possible_activity[int(type_activity)][2], file_name)
+    #     if status:
+    #         status = start(False)
+    # ch = input('Do you want to save changes?\nType Y - or any key - to refuse:\n')
+    # if ch:
+    #     exist_pb(our_pb, '', file_name)
