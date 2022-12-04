@@ -3,11 +3,11 @@ import sys
 
 
 # ----
-def print_result(res: dict, ind, condition):
+def print_result(item: dict, ind, condition):
     p1 = ''
-    for k, v in name_dict:
-        p1 += v + ': ' + res[k] + '\n'
-    print(f'Searching by indication: {ind}\nby condition: {condition} \nresult is:\n{p1}')
+    for key in item:
+        p1 += key + ': ' + item[key] + '\n'
+    print(f'Searching by indication: {ind}\nBy condition: {condition} \nResult is:\n{p1}')
 
 
 def print_delete():
