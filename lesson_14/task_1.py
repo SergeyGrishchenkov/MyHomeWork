@@ -4,8 +4,7 @@ from functools import wraps
 
 
 def logger(func):
-    wraps(func)
-
+    @wraps(func)
     def warp(*args):
         arguments = ', '.join(map(str, args))
         print(f'{func.__name__} called with {arguments}')
