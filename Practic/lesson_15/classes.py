@@ -1,3 +1,5 @@
+import accessify as a
+
 class Test:
     a = 5
     b = 6
