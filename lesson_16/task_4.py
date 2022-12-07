@@ -19,7 +19,7 @@ def test_func(l: list):
         for item in l:
             result += item
     except:
-        CustomException(Exception.__context__.__doc__)
+        CustomException(f'Function:{test_func.__name__} - {Exception.__context__.__dir__()}')
 
 
 list = [1, 2, 3, '7']
