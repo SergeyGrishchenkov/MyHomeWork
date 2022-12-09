@@ -41,7 +41,7 @@ class ProductStore:
 
     def set_discount(self, identifier, percent, identifier_type=''):
         try:
-            pass
+            list(filter(lambda y: y['type'] == 'Food', [x.__dict__ for x in self.products]))
         except:
             raise ValueError("Impossible to set discount!")
 
@@ -86,7 +86,12 @@ for item in stor.products:
 
 list_a = [-2, -1, 0, 1, 2, 3, 4, 5]    # Пусть у нас есть исходный список
 list_b = [x.__dict__ for x in stor.products]
-print(list_b)
+#def test(d):
+
+lll = list(filter(lambda y: y['type'] == 'Food', [x.__dict__ for x in stor.products]))
+
+ll = [x.__dict__ for x in stor.products]
+print(ll)
 #
 # s.add(p2, 300)
 #
