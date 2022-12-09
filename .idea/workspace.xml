@@ -139,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MyHomeWork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,7 +152,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_16/task_4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lesson_16/tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.task_3 (1)" />
+        <item itemvalue="Python.tests" />
         <item itemvalue="Python.practic_2" />
         <item itemvalue="Python.task_1 (1)" />
         <item itemvalue="Python.task_2" />
-        <item itemvalue="Python.task_4" />
       </list>
     </recent_temporary>
   </component>
@@ -205,14 +205,7 @@
       <workItem from="1669741510566" duration="13366000" />
       <workItem from="1669989654210" duration="26267000" />
       <workItem from="1670135128627" duration="35015000" />
-      <workItem from="1670437828091" duration="17749000" />
-    </task>
-    <task id="LOCAL-00042" summary="Lesson 5 Home tasks">
-      <created>1668072083904</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1668072083904</updated>
+      <workItem from="1670437828091" duration="22188000" />
     </task>
     <task id="LOCAL-00043" summary="Lesson 5 Home tasks">
       <created>1668287643561</created>
@@ -550,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670566715048</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Lesson 16 Home tasks">
+      <created>1670571050773</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1670571050774</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,6 +597,7 @@
     <SUITE FILE_PATH="coverage/MyHomeWork$lesson_9.coverage" NAME="lesson_9 Coverage Results" MODIFIED="1668239306577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Practic" />
     <SUITE FILE_PATH="coverage/MyHomeWork$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1668425992584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_9/for_test_3" />
     <SUITE FILE_PATH="coverage/MyHomeWork$Task3.coverage" NAME="Task3 Coverage Results" MODIFIED="1667121325626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_4" />
+    <SUITE FILE_PATH="coverage/MyHomeWork$tests.coverage" NAME="tests Coverage Results" MODIFIED="1670596226117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_16" />
     <SUITE FILE_PATH="coverage/MyHomeWork$mymod__2_.coverage" NAME="mymod (2) Coverage Results" MODIFIED="1668434378041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_9/test_3" />
     <SUITE FILE_PATH="coverage/MyHomeWork$ClassRoomTask.coverage" NAME="ClassRoomTask Coverage Results" MODIFIED="1667832204897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Practic/Lesson_7" />
     <SUITE FILE_PATH="coverage/MyHomeWork$tsak_3.coverage" NAME="tsak_3 Coverage Results" MODIFIED="1667976450821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_8" />
@@ -607,7 +608,7 @@
     <SUITE FILE_PATH="coverage/MyHomeWork$task_2__1_.coverage" NAME="task_2 (1) Coverage Results" MODIFIED="1670176757644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_15" />
     <SUITE FILE_PATH="coverage/MyHomeWork$Task_4.coverage" NAME="Task_4 Coverage Results" MODIFIED="1667843211445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_7" />
     <SUITE FILE_PATH="coverage/MyHomeWork$task_1_2.coverage" NAME="task_1_2 Coverage Results" MODIFIED="1668890711457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_11" />
-    <SUITE FILE_PATH="coverage/MyHomeWork$task_3__1_.coverage" NAME="task_3 (1) Coverage Results" MODIFIED="1670571039639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_16" />
+    <SUITE FILE_PATH="coverage/MyHomeWork$task_3__1_.coverage" NAME="task_3 (1) Coverage Results" MODIFIED="1670598023355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_16" />
     <SUITE FILE_PATH="coverage/MyHomeWork$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1666981321407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_2" />
     <SUITE FILE_PATH="coverage/MyHomeWork$task_1__1_.coverage" NAME="task_1 (1) Coverage Results" MODIFIED="1670443133327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lesson_16" />
     <SUITE FILE_PATH="coverage/MyHomeWork$Task2.coverage" NAME="Task2 Coverage Results" MODIFIED="1667075338479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lesson_4" />
