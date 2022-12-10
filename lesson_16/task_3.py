@@ -26,6 +26,7 @@ class Product:
 class ProductStore:
     __price_premium = 30
     __income = 0
+    __disc_message = "The discount has been set for:"
 
     def __init__(self, address: str, products: object = []):
         self.address = address
@@ -33,48 +34,50 @@ class ProductStore:
 
     def add(self, product: Product, amount: float):
         try:
+            if amount <= 0:
+                raise ValueError
             product.price *= ((self.__price_premium / 100) + 1)
             product.amount = amount
             self.products.append(product)
-        except:
-            raise ValueError("Impossible to add priduct!")
+        except ValueError:
+            print("Impossible to add product with amount < 0!")
 
     def set_discount(self, identifier, percent, identifier_type=''):
         try:
-            list(filter(lambda y: y['type'] == 'Food', [x.__dict__ for x in self.products]))
-        except:
-            raise ValueError("Impossible to set discount!")
+            counter = 0
+            for item in self.products:
+                if item.name == identifier or item.type == identifier_type:
+                    item.discount = percent
+                    counter += 1
+                    print(f"{self.__disc_message} {item.name}")
+            if counter == 0:
+                raise ValueError
+        except ValueError:
+            print(f'Impossible to set discount for product: {identifier} or type: {identifier_type}')
 
     def sell_product(self, product_name, amount):
         try:
+            if amount <= 0:
+                raise ValueError
             for item in self.products:
                 if item.name == product_name and item.amount >= amount:
-                    before_sell = self.get_product_info(product_name)
+                    if amount > item.amount:
+                        raise ValueError
                     print(f'Going to sell - {item.name}, Now we have - {item.amount}')
                     item.amount -= amount
-                    self.__income += amount * item.price
-                    after_sell = self.get_product_info(product_name)
+                    self.__income += amount * (item.price if not 'discount' in item.__dict__ else item.price * (1 - item.discount / 100) )
                     print(f'{item.name} sold in quantity - {amount}, on the balance - {item.amount}')
-        except:
-            raise ValueError("Impossible to sell!!")
+        except ValueError:
+            print("Impossible to sell with such amount !!!")
 
     def get_income(self):
-        try:
-            return self.__income
-        except:
-            raise ValueError("Impossible to get income!")
+        return self.__income
 
     def get_product_info(self, product_name: str):
-        try:
-            return tuple((x.__dict__['name'], x.__dict__['amount']) for x in self.products if x.__dict__['name'] == product_name)[0]
-        except:
-            raise ValueError("There are not such product!!")
+        return tuple((x.__dict__['name'], x.__dict__['amount']) for x in self.products if x.__dict__['name'] == product_name)[0]
 
     def get_all_products(self):
-        try:
-            return tuple((x.__dict__['name'], x.__dict__['amount']) for x in self.products)
-        except:
-            raise ValueError("Impossible to show information!!")
+        return tuple((x.__dict__['name'], x.__dict__['amount']) for x in self.products)
 
 
 p = Product('Sport', 'Football T-Shirt', 100)
@@ -92,26 +95,11 @@ print(s.get_all_products())
 print(f'The total income is: {s.get_income()}')
 print(s.get_product_info('Ramen'))
 assert s.get_product_info('Ramen') == ('Ramen', 290)
-# for item in stor.products:
-#     print(type(item))
-#     if 'Food' in item.__dict__.values():
-#         print(item.__dict__)
-#
-# list_a = [-2, -1, 0, 1, 2, 3, 4, 5]    # Пусть у нас есть исходный список
-# list_b = [x.__dict__ for x in stor.products]
-# #def test(d):
-#
-# lll = list(filter(lambda y: y['type'] == 'Food', [x.__dict__ for x in stor.products]))
-#
-# ll = [x.__dict__ for x in stor.products]
-# print(ll)
-# #ww = tuple(filter(lambda y: y['name'] == 'Ramen', (x.__dict__ for x in stor.products)))
-# ww = tuple((x.__dict__['name'], x.__dict__['amount']) for x in stor.products if x.__dict__['name'] == 'Ramen')[0]
-# print(ww)
-#
-# s.add(p2, 300)
-#
-# s.sell(‘Ramen’, 10)
-#
-# assert s.get_product_info(‘Ramen’) == (‘Ramen’, 290)
+
+s.set_discount('Football T-Shirt', 20)
+print(s.products[0].__dict__)
+s.sell_product('Football T-Shirt', 2)
+print(f'The total income is: {s.get_income()}')
+print(s.products[0].__dict__)
+
 
