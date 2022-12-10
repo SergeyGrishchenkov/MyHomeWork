@@ -22,6 +22,11 @@ class Author:
 class Library:
     __amount_books = 0
 
+    def __new__(cls, *args, **kwargs):
+        cls.__amount_books += 1
+        instance = super().__new__(cls)
+        return instance
+
     def __init__(self, name: str, books: list = [], authors: list = []):
         self.name = name
         self.books = books
@@ -34,7 +39,7 @@ class Library:
     def new_book(self, name: str, year: int, author: Author):
         """returns an instance of Book class and adds the book to the books list for the current library"""
         new_book = Book(name, year, author)
-        self.books.append(name)
+        self.books.append(new_book)
         if not author in self.authors:
             self.authors.append(author)
 
@@ -67,7 +72,8 @@ class Book:
 
 def main():
     my_library = Library("The best for you!")
-
+    my_library.new_book("Vika", "2020", Author("Vika", "Ukraine", "2000-01-01",))
+    print(my_library.__dict__)
 
 if __name__ == "__main__":
     main()
