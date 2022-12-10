@@ -62,9 +62,7 @@ class Fraction:
         else:
             return False
 
-
-
-if __name__ == "__main__":
+def main():
     x = Fraction(1, 2)
     y = Fraction(1, 4)
     print(x + y == Fraction(3, 4))
@@ -76,5 +74,9 @@ if __name__ == "__main__":
     print(x * y == Fraction(3, 10))
     print("*"*20)
     x = Fraction(4, 7)
-    y = Fraction(0, 5)
+    y = Fraction(2, 5)
     print(x / y == Fraction(10, 7))
+
+if __name__ == "__main__":
+    main()
+
