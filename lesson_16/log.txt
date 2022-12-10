@@ -1,0 +1,6 @@
+
+Time: Wed Dec  7 10:30:40 2022 exception: <class 'Exception'>Time: Wed Dec  7 10:31:47 2022 exception: test_funcexception contextTime: Wed Dec  7 10:33:27 2022 exception: Function:test_func - exception context
+Time: Wed Dec  7 10:33:28 2022 exception: Function:test_func - exception context
+Time: Wed Dec  7 10:34:22 2022 exception: Function:test_func - <built-in method __dir__ of getset_descriptor object at 0x0000012C6B55ED80>
+Time: Wed Dec  7 10:34:24 2022 exception: Function:test_func - <built-in method __dir__ of getset_descriptor object at 0x000002DA03DAED80>
+Time: Wed Dec  7 10:34:47 2022 exception: Function:test_func - ['__repr__', '__getattribute__', '__get__', '__set__', '__delete__', '__objclass__', '__name__', '__doc__', '__qualname__', '__new__', '__hash__', '__str__', '__setattr__', '__delattr__', '__lt__', '__le__', '__eq__', '__ne__', '__gt__', '__ge__', '__init__', '__reduce_ex__', '__reduce__', '__getstate__', '__subclasshook__', '__init_subclass__', '__format__', '__sizeof__', '__dir__', '__class__']
