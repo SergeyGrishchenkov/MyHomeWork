@@ -7,31 +7,48 @@ class Fraction:
         self.nominator = nominator
         self.denominator = denominator
 
-    def reduction(self):
-        den = min(self.nominator, self.denominator) // 2
+    @staticmethod
+    def reduction(new_nom, new_denom):
+        den = min(abs(new_nom), abs(new_denom)) // 2
+        for item in range(den, 0, -1):
+            if new_nom % item == 0 and new_denom % item == 0:
+                return item
+        return 1
 
-
-    def intermediate_calculation(self, other):
+    def inter_calc(self, other):
         return [self.nominator * other.denominator,
                 other.nominator * self.denominator,
-                other.denominator * self.denominator,
-                (self.denominator if self.denominator < other.denominator else other.denominator)]
+                other.denominator * self.denominator]
 
     def __add__(self, other):
-        items = self.intermediate_calculation(other)
-        return Fraction((items[0] + items[1]) / items[3], items[2] / items[3])
+        items = self.inter_calc(other)
+        new_nom = (items[0] + items[1])
+        new_denom = items[2]
+        reduce = self.reduction(new_nom, new_denom)
+        return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __sub__(self, other):
-        items = self.intermediate_calculation(other)
-        return Fraction((items[0] - items[1]) / items[3], items[2] / items[3])
+        items = self.inter_calc(other)
+        new_nom = (items[0] - items[1])
+        new_denom = items[2]
+        reduce = self.reduction(new_nom, new_denom)
+        return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __mul__(self, other):
-        return Fraction()
+        new_nom = self.nominator * other.nominator
+        new_denom = self.denominator * other.denominator
+        reduce = self.reduction(new_nom, new_denom)
+        return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __truediv__(self, other):
-        pass
+        new_nom = self.nominator * other.denominator
+        new_denom = self.denominator * other.nominator
+        reduce = self.reduction(new_nom, new_denom)
+        return Fraction((new_nom / reduce), (new_denom / reduce))
 
-f1 = Fraction(3, 8)
-f2 = Fraction(5, 4)
-f3 = f1 - f2
+
+f1 = Fraction(4, 7)
+f2 = Fraction(2, 5)
+f3 = f1 / f2
 print(f3.__dict__)
+
