@@ -72,7 +72,12 @@ class Book:
 
 def main():
     my_library = Library("The best for you!")
-    my_library.new_book("Vika", "2020", Author("Vika", "Ukraine", "2000-01-01",))
+    my_library.new_book("Love Story 1", "2020", Author("Vika", "Ukraine", "2000-01-01",))
+    my_library.new_book("Love Story 2", "2021", Author("Taras", "Ukraine", "1990-01-01", ))
+    my_library.new_book("Love Story 3", "2015", Author("Vika", "Ukraine", "2000-01-01", ))
+    my_library.new_book("Love Story 4", "2021", Author("Vika", "Ukraine", "2000-01-01", ))
+    my_library.new_book("Love Story 5", "2015", Author("Taras", "Ukraine", "1990-01-01", ))
+    my_library.new_book("Love Story 6", "2020", Author("Taras", "Ukraine", "1990-01-01", ))
     print(my_library.__dict__)
 
 if __name__ == "__main__":
