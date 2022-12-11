@@ -18,6 +18,15 @@ class Author:
         self.birthday = birthday
         self.books = books
 
+    def __eq__(self, other):
+        if self.name == other.name and self.country == other.country and self.birthday == other.birthday:
+            return True
+        else:
+            return False
+
+    def __contains__(self, item):
+        pass
+
 
 class Library:
     __amount_books = 0
@@ -32,9 +41,12 @@ class Library:
         self.books = books
         self.authors = authors
 
+
+
     @property
     def amount_books(self):
         return self.__amount_books
+
 
     def new_book(self, name: str, year: int, author: Author):
         """returns an instance of Book class and adds the book to the books list for the current library"""
@@ -42,6 +54,7 @@ class Library:
         self.books.append(new_book)
         if not author in self.authors:
             self.authors.append(author)
+            print(f'{author.__dict__} added')
 
     def group_by_author(self, author: Author):
         """returns a list of all books grouped by the specified author"""
