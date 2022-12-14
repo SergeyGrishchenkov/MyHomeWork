@@ -22,5 +22,6 @@ class MathTestCase(unittest.TestCase):
         l2 = [1884, 2020]
         self.assertEqual(self.my_class.filter_leaps(l1), l2)
 
+
 if __name__ == "__main__":
     unittest.main()
