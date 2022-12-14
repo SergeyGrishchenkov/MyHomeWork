@@ -1,2 +1,4 @@
 
 Time: Sat Dec 10 17:14:25 2022 exception: Function:test_func - has exception
+Time: Wed Dec 14 22:57:20 2022 exception: Function:test_func - has exception
+Time: Wed Dec 14 22:57:29 2022 exception: Function:test_func - has exception

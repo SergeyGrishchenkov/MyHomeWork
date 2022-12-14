@@ -24,45 +24,49 @@ class Author:
         else:
             return False
 
-    def __contains__(self, item):
-        pass
-
+    def is_member(self, set_books: list):
+        for item in set_books:
+            if self == item:
+                return True
+            else:
+                return False
 
 class Library:
     __amount_books = 0
-
-    def __new__(cls, *args, **kwargs):
-        cls.__amount_books += 1
-        instance = super().__new__(cls)
-        return instance
 
     def __init__(self, name: str, books: list = [], authors: list = []):
         self.name = name
         self.books = books
         self.authors = authors
 
-
-
     @property
     def amount_books(self):
         return self.__amount_books
-
 
     def new_book(self, name: str, year: int, author: Author):
         """returns an instance of Book class and adds the book to the books list for the current library"""
         new_book = Book(name, year, author)
         self.books.append(new_book)
+        self.__amount_books += 1
         if not author in self.authors:
             self.authors.append(author)
             print(f'{author.__dict__} added')
 
+
     def group_by_author(self, author: Author):
         """returns a list of all books grouped by the specified author"""
-        pass
+        l = []
+        for b in self.books:
+            if author == b.author:
+                l.append(b)
+        return l
 
     def group_by_year(self, year: int):
-        """returns a list of all the books grouped by the specified year"""
-        pass
+        l = []
+        for b in self.books:
+            if year == b.year:
+                l.append(b)
+        return l
 
 
 class Book:
@@ -77,6 +81,7 @@ class Book:
         self.name = name
         self.year = year
         self.author = author
+        self.__amount_books += 1
 
     @property
     def amount_books(self):
@@ -85,13 +90,21 @@ class Book:
 
 def main():
     my_library = Library("The best for you!")
-    my_library.new_book("Love Story 1", "2020", Author("Vika", "Ukraine", "2000-01-01",))
-    my_library.new_book("Love Story 2", "2021", Author("Taras", "Ukraine", "1990-01-01", ))
-    my_library.new_book("Love Story 3", "2015", Author("Vika", "Ukraine", "2000-01-01", ))
-    my_library.new_book("Love Story 4", "2021", Author("Vika", "Ukraine", "2000-01-01", ))
-    my_library.new_book("Love Story 5", "2015", Author("Taras", "Ukraine", "1990-01-01", ))
-    my_library.new_book("Love Story 6", "2020", Author("Taras", "Ukraine", "1990-01-01", ))
-    print(my_library.__dict__)
+    my_library.new_book("Love Story 1", 2020, Author("Vika", "Ukraine", "2000-01-01", ))
+    my_library.new_book("Love Story 2", 2021, Author("Taras", "Ukraine", "1990-01-01", ))
+    my_library.new_book("Love Story 3", 2015, Author("Vika", "Ukraine", "2000-01-01", ))
+    my_library.new_book("Love Story 4", 2021, Author("Vika", "Ukraine", "2000-01-01", ))
+    my_library.new_book("Love Story 5", 2015, Author("Taras", "Ukraine", "1990-01-01", ))
+    my_library.new_book("Love Story 6", 2020, Author("Taras", "Ukraine", "1990-01-01", ))
+
+    author_list = my_library.group_by_author(Author("Vika", "Ukraine", "2000-01-01", ))
+    print(author_list)
+    print('*' * 20)
+    year_list = my_library.group_by_year(2020)
+    print(year_list)
+    print('*'*20)
+    print(f'Amount of books in Library: {my_library.amount_books}')
+
 
 if __name__ == "__main__":
     main()
