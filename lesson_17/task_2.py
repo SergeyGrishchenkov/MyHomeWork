@@ -10,6 +10,7 @@
 # - group_by_year(year: int) - returns a list of all the books grouped by the specified year
 # All 3 classes must have a readable __repr__ and __str__ methods.
 # Also, the book class should have a class variable which holds the amount of all existing books
+import json
 
 class Author:
     def __init__(self, name: str, country: str, birthday: str, books: list = []):
@@ -52,24 +53,26 @@ class Library:
             self.authors.append(author)
             print(f'{author.__dict__} added')
 
-
     def group_by_author(self, author: Author):
         """returns a list of all books grouped by the specified author"""
-        l = []
+        author_dic = {author.name: []}
         for b in self.books:
             if author == b.author:
-                l.append(b)
-        return l
+                author_dic[author.name].append((b.name, b.year))
+        json_data = json.dumps(author_dic, indent=4)
+        return json_data
 
     def group_by_year(self, year: int):
-        l = []
+        year_dic = {year: []}
         for b in self.books:
             if year == b.year:
-                l.append(b)
-        return l
+                year_dic[year].append((b.name, {b.author.name: (b.author.country, b.author.birthday)}))
+        json_data = json.dumps(year_dic, indent=4)
+        return json_data
 
 
 class Book:
+
     __amount_books = 0
 
     def __new__(cls, *args, **kwargs):
@@ -82,6 +85,7 @@ class Book:
         self.year = year
         self.author = author
         self.__amount_books += 1
+
 
     @property
     def amount_books(self):

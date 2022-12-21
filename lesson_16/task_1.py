@@ -6,7 +6,8 @@
 # while salary should only be available to the teacher.
 
 class Person:
-    __slots__ = ('first_name', 'last_name','gender', 'birthday')
+    __slots__ = ('first_name', 'last_name', 'gender', 'age')
+
     def __init__(self, first_name, last_name, gender, age):
         self.first_name = first_name
         self.last_name = last_name
@@ -18,6 +19,8 @@ class Person:
 
     def __str__(self):
         return f'{self.__class__.__name__} with name: {self.first_name}'
+
+
 class Teacher(Person):
     def __init__(self, first_name, last_name, gender, age, subjects: [], salary):
         super().__init__(first_name, last_name, gender, age)
@@ -31,6 +34,7 @@ class Teacher(Person):
         sb = '\n'.join(self.subjects)
         print(f'Teacher {self.first_name} {self.last_name} conducts the following subjects:\n{sb}')
 
+
 class Student(Person):
     def __init__(self, first_name, last_name, gender, age, faculty, specialization):
         super().__init__(first_name, last_name, gender, age)
@@ -38,14 +42,16 @@ class Student(Person):
         self.specialization = specialization
 
     def print_study(self):
-        print(f'Student: {self.first_name} {self.last_name}\nFaculty: {self.faculty}\nSpecialization: {self.specialization}')
+        print(
+            f'Student: {self.first_name} {self.last_name}\nFaculty: {self.faculty}\nSpecialization: {self.specialization}')
 
 
-t1 = Teacher('Anna', 'Samon', 'female', 25, ['History', 'Philosophy'], 100000)
-print(t1)
-print(f'Salary: {t1.get_salary()}')
-t1.subjects_list()
-print('*'*20)
-s1 = Student('Roman', 'Kl', 'male', 20, 'Historical', 'Ukraine')
-print(s1)
-s1.print_study()
+if __name__ == '__main__':
+    t1 = Teacher('Anna', 'Samon', 'female', 25, ['History', 'Philosophy'], 100000)
+    print(t1)
+    print(f'Salary: {t1.get_salary()}')
+    t1.subjects_list()
+    print('*' * 20)
+    s1 = Student('Roman', 'Kl', 'male', 20, 'Historical', 'Ukraine')
+    print(s1)
+    s1.print_study()

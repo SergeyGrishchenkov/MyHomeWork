@@ -29,31 +29,43 @@ class Fraction:
                 other.denominator * self.denominator]
 
     def __add__(self, other):
-        items = self.inter_calc(other)
-        new_nom = (items[0] + items[1])
-        new_denom = items[2]
-        reduce = self.reduction(new_nom, new_denom)
+        if not isinstance(other, type(self)):
+            raise ValueError('wrong type of argument')
+        else:
+            items = self.inter_calc(other)
+            new_nom = (items[0] + items[1])
+            new_denom = items[2]
+            reduce = self.reduction(new_nom, new_denom)
         return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __sub__(self, other):
-        items = self.inter_calc(other)
-        new_nom = (items[0] - items[1])
-        new_denom = items[2]
-        reduce = self.reduction(new_nom, new_denom)
+        if not isinstance(other, type(self)):
+            raise ValueError('wrong type of argument')
+        else:
+            items = self.inter_calc(other)
+            new_nom = (items[0] - items[1])
+            new_denom = items[2]
+            reduce = self.reduction(new_nom, new_denom)
         return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __mul__(self, other):
-        new_nom = self.nominator * other.nominator
-        new_denom = self.denominator * other.denominator
-        reduce = self.reduction(new_nom, new_denom)
+        if not isinstance(other, type(self)):
+            raise ValueError('wrong type of argument')
+        else:
+            new_nom = self.nominator * other.nominator
+            new_denom = self.denominator * other.denominator
+            reduce = self.reduction(new_nom, new_denom)
         return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __truediv__(self, other):
-        if other.denominator == 0:
-            raise ZeroDivisionError("for divide operator the nominator of second fractal cannot be zero")
-        new_nom = self.nominator * other.denominator
-        new_denom = self.denominator * other.nominator
-        reduce = self.reduction(new_nom, new_denom)
+        if not isinstance(other, type(self)):
+            raise ValueError('wrong type of argument')
+        else:
+            if other.denominator == 0:
+                raise ZeroDivisionError("for divide operator the nominator of second fractal cannot be zero")
+            new_nom = self.nominator * other.denominator
+            new_denom = self.denominator * other.nominator
+            reduce = self.reduction(new_nom, new_denom)
         return Fraction((new_nom / reduce), (new_denom / reduce))
 
     def __eq__(self, other):
