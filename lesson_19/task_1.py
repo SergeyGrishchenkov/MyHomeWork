@@ -7,10 +7,9 @@ from typing import List
 def with_index(iterable, start=0):
     if not isinstance(start, int):
         raise TypeError("Start of enumerate must be INT")
-    start -= 1
     for item in iterable:
-        start += 1
         yield start, item
+        start += 1
 
 my_list = [1, 2, 3, 4, 5, '33']
 
