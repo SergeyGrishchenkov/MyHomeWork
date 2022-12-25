@@ -30,10 +30,16 @@
 #     return a + b
 #
 # print(my_test(2, 3))
-persona_dict = dict(first_name='', last_name='', full_name='', phone_numbers='', state='', city='')
-d1 = dict(_1='1', _2='2')
-d2 = dict(_1='1', _2=2)
-print(d1 == d2)
-print(d1)
-d1[3] = 33
-print(d1)
+# persona_dict = dict(first_name='', last_name='', full_name='', phone_numbers='', state='', city='')
+# d1 = dict(_1='1', _2='2')
+# d2 = dict(_1='1', _2=2)
+# print(d1 == d2)
+# print(d1)
+# d1[3] = 33
+# print(d1)
+f = open('t.txt', 'w')
+f.readable()
+print(f.readlines())
+
+# print(issubclass(f, _io.TextIOWrapper))
+

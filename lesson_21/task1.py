@@ -61,7 +61,7 @@ class ContextTextFile:
 def main():
     f_name = 'test.txt'
     with ContextTextFile(f_name, 'w') as f:
-        f.write('77777')
+        f.writelines('77777')
 
     print(f'The counter value is: {ContextTextFile.get_count()}')
 
@@ -72,12 +72,9 @@ def main():
     print(f'The counter value is: {ContextTextFile.get_count()}')
 
     with ContextTextFile(f_name, 'a') as f:
-        result = f.write('\n77777')
-        print(result)
+        f.write('\n77777')
 
     print(f'The counter value is: {ContextTextFile.get_count()}')
-
-
 
 
 if __name__ == '__main__':
