@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 21 Home tasks">
-      <change afterPath="$PROJECT_DIR$/lesson_31/task1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_31/task2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_34/my.sql" afterDir="false" />
+    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 33 Home tasks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PracticMain/first.py" beforeDir="false" afterPath="$PROJECT_DIR$/PracticMain/first.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_34/my.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_34/task1.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,21 +210,7 @@
       <workItem from="1672163086541" duration="136000" />
       <workItem from="1672163249427" duration="2670000" />
       <workItem from="1672332024586" duration="1182000" />
-      <workItem from="1672473732476" duration="7331000" />
-    </task>
-    <task id="LOCAL-00066" summary="Lesson 11 Home tasks">
-      <created>1669833107480</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1669833107480</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Lesson 11 Home tasks">
-      <created>1669833751024</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1669833751024</updated>
+      <workItem from="1672473732476" duration="8759000" />
     </task>
     <task id="LOCAL-00068" summary="Lesson 11 Home tasks">
       <created>1669835076554</created>
@@ -558,7 +541,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672000565277</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Lesson 31 Home tasks">
+      <created>1672687893482</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1672687893497</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Lesson 33 Home tasks">
+      <created>1672688047816</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1672688047816</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +594,9 @@
     <MESSAGE value="Lesson 18 Home tasks" />
     <MESSAGE value="Lesson 20 Home tasks" />
     <MESSAGE value="Lesson 21 Home tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 21 Home tasks" />
+    <MESSAGE value="Lesson 31 Home tasks" />
+    <MESSAGE value="Lesson 33 Home tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 33 Home tasks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
