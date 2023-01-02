@@ -33,13 +33,19 @@
 # persona_dict = dict(first_name='', last_name='', full_name='', phone_numbers='', state='', city='')
 # d1 = dict(_1='1', _2='2')
 # d2 = dict(_1='1', _2=2)
-# print(d1 == d2)
+# print(d1 == d2))
 # print(d1)
 # d1[3] = 33
 # print(d1)
-f = open('t.txt', 'w')
-f.readable()
-print(f.readlines())
+# f = open('t.txt', 'w')
+# f.readable()
+# print(f.readlines())
 
 # print(issubclass(f, _io.TextIOWrapper))
+# a, b, c = input().split()
+import math
+course = 73.54
+summa = 1000
+print(f"Вы можете получить {math.floor(summa / course)}$ за {summa} рублей по курсу {course}")
+# print(c.ljust("0"))
 
