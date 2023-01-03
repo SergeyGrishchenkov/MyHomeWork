@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 33 Home tasks">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_34/my.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_34/task1.sql" afterDir="false" />
+    <list default="true" id="d30ae05c-683e-4b5b-b327-54e97eccde37" name="Changes" comment="Lesson 34 Home tasks">
+      <change beforePath="$PROJECT_DIR$/lesson_34/task1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_34/task1.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,14 +209,7 @@
       <workItem from="1672163086541" duration="136000" />
       <workItem from="1672163249427" duration="2670000" />
       <workItem from="1672332024586" duration="1182000" />
-      <workItem from="1672473732476" duration="8759000" />
-    </task>
-    <task id="LOCAL-00068" summary="Lesson 11 Home tasks">
-      <created>1669835076554</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1669835076554</updated>
+      <workItem from="1672473732476" duration="9377000" />
     </task>
     <task id="LOCAL-00069" summary="Lesson 15 Home tasks">
       <created>1669925316526</created>
@@ -555,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672688047816</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Lesson 34 Home tasks">
+      <created>1672696802960</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1672696802960</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +595,8 @@
     <MESSAGE value="Lesson 21 Home tasks" />
     <MESSAGE value="Lesson 31 Home tasks" />
     <MESSAGE value="Lesson 33 Home tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 33 Home tasks" />
+    <MESSAGE value="Lesson 34 Home tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 34 Home tasks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
