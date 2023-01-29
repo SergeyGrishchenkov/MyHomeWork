@@ -43,9 +43,10 @@
 
 # print(issubclass(f, _io.TextIOWrapper))
 # a, b, c = input().split()
-import math
-course = 73.54
-summa = 1000
-print(f"Вы можете получить {math.floor(summa / course)}$ за {summa} рублей по курсу {course}")
-# print(c.ljust("0"))
-
+# import math
+# course = 73.54
+# summa = 1000
+# print(f"Вы можете получить {math.floor(summa / course)}$ за {summa} рублей по курсу {course}")
+import sys
+lst_in = list(map(str.strip, sys.stdin.readlines()))
+print(lst_in)
