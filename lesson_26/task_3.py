@@ -66,21 +66,22 @@ class Queue:
     def __repr__(self):
         return f'Now queue is : {self.queue}'
 
-stack_test = Stack()
-for item in range(11):
-    stack_test.push(item)
-print(stack_test)
-stack_test.get_from_stack(7)
-print(stack_test)
-stack_test.get_from_stack(71)
-print(stack_test)
-print("*"*20)
-q1 = Queue()
-print(f'Empty: {q1.is_empty()}')
-for item in range(5, 26, 2):
-    q1.enqueue(item)
-print(q1)
-q1.get_from_queue(17)
-print(q1)
-q1.get_from_queue(18)
-print(q1)
+if __name__ == '__main__':
+    stack_test = Stack()
+    for item in range(11):
+        stack_test.push(item)
+    print(stack_test)
+    stack_test.get_from_stack(7)
+    print(stack_test)
+    stack_test.get_from_stack(71)
+    print(stack_test)
+    print("*"*20)
+    q1 = Queue()
+    print(f'Empty: {q1.is_empty()}')
+    for item in range(5, 26, 2):
+        q1.enqueue(item)
+    print(q1)
+    q1.get_from_queue(17)
+    print(q1)
+    q1.get_from_queue(18)
+    print(q1)
